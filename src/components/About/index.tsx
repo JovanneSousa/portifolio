@@ -2,7 +2,7 @@ import { AboutSection } from './styles'
 
 const About = () => {
   return (
-    <AboutSection>
+    <AboutSection id='sobre'>
       <div className="container">
         <h2>
           Sobre <span>Mim</span>

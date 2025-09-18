@@ -19,11 +19,21 @@ const Header = () => {
         <h1>Portifólio</h1>
         <nav>
           <ul>
-            <li>Início</li>
-            <li>Sobre</li>
-            <li>Tecnologias</li>
-            <li>Projetos</li>
-            <li className="is-active">Contato</li>
+            <li>
+              <a href="#inicio">Início</a>
+            </li>
+            <li>
+              <a href="#sobre"> Sobre</a>
+            </li>
+            <li>
+              <a href="#tecnologia">Tecnologias</a>
+            </li>
+            <li>
+              <a href="#projeto">Projeto</a>
+            </li>
+            <li className="is-active">
+              <a href="#contato" className='white'>Contato</a>
+            </li>
           </ul>
         </nav>
       </div>

@@ -12,7 +12,9 @@ export const colors = {
   lightGray: `#a3a3a3`,
   background: `#EAEAF9`,
   background2: `#F6F7F9`,
-  border: `#F4EAF9`
+  border: `#F4EAF9`,
+  footer: `#24212C`,
+  textFooter: `#D3D3D5`
 }
 
 export const breakpoints = {
@@ -33,6 +35,10 @@ export const EstiloGlobal = createGlobalStyle`
   body {
     background-color: ${colors.background};
     color: ${colors.gray};
+
+    a {
+      color: ${colors.gray};
+    }
   }
 
   .container {

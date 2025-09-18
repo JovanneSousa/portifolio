@@ -2,7 +2,7 @@ import { Container } from "./styles";
 
 const Hero = () => {
     return (
-        <Container>
+        <Container id="inicio">
             <div>
                 <div className="titleContainer">
                 <h2 className="title">Desenvolvedor</h2>

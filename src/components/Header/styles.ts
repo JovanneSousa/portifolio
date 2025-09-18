@@ -12,7 +12,7 @@ export const HeaderSection = styled.header<HeaderProps>`
   height: 7vh;
   transition: background 0.3s ease, border-bottom 0.3s ease;
 
-  backdrop-filter: ${({ scrolled }) => scrolled ? 'blur(7px)' : 'none'};
+  backdrop-filter: ${({ scrolled }) => (scrolled ? 'blur(7px)' : 'none')};
 
   background: ${({ scrolled }) =>
     scrolled ? colors.transparentWhite : 'transparent'};
@@ -39,6 +39,11 @@ export const HeaderSection = styled.header<HeaderProps>`
     li {
       padding: 8px 16px;
       border-radius: 8px;
+      
+      .white {
+        color: ${colors.white};
+      }
     }
   }
+
 `
