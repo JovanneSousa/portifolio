@@ -20,6 +20,7 @@ export const ContactSection = styled.section`
 
   .content {
     display: flex;
+    gap: 3rem;
   }
 
   .title {
@@ -80,6 +81,10 @@ export const ContactSection = styled.section`
     margin-right: 12px;
   }
 
+  .input {
+    margin-bottom: 24px;
+  }
+
   form {
     background-color: ${colors.white};
     width: 50%;
@@ -88,7 +93,8 @@ export const ContactSection = styled.section`
     padding: 24px;
   }
 
-  input, textarea {
+  input,
+  textarea {
     background-color: ${colors.background2};
     display: block;
     margin-top: 8px;
@@ -96,9 +102,33 @@ export const ContactSection = styled.section`
     border-radius: 8px;
     border: 1px solid ${colors.border};
     width: 100%;
+    color: ${colors.gray};
+    &:focus {
+      border: 2px solid ${colors.purple};
+      outline-color: ${colors.purple};
+    }
+  }
+
+  textarea {
+    height: 120px;
+    resize: none;
   }
 
   label {
     color: ${colors.black};
+  }
+
+  button {
+    width: 100%;
+    border-radius: 8px;
+    padding: 16px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .shadow {
+    &:hover {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+    }
   }
 `

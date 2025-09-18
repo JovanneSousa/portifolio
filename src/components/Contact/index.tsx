@@ -1,8 +1,10 @@
+import { useState } from 'react'
 import { ContactSection } from './styles'
 
 const Contact = () => {
+  const [texto, setTexto ] = useState("Descreva como eu posso te ajudar...")
   return (
-    <ContactSection>
+    <ContactSection id='contato'>
       <div className="container">
         <div className="title">
           <h2>
@@ -54,8 +56,8 @@ const Contact = () => {
                 </svg>
               </div>
               <div className="info-contact">
-                <p className="title-contact">Email</p>
-                <p className="address">jovanemaciel943@gmail.com</p>
+                <p className="title-contact">Telefone</p>
+                <p className="address">+55 (65) 99238-4824</p>
               </div>
             </div>
             <div className="info-rede">
@@ -74,20 +76,32 @@ const Contact = () => {
                 </svg>
               </div>
               <div className="info-contact">
-                <p className="title-contact">Email</p>
-                <p className="address">jovanemaciel943@gmail.com</p>
+                <p className="title-contact">Localização</p>
+                <p className="address">Cuiabá, Mato Grosso</p>
               </div>
             </div>
           </div>
           <form action="submit">
-            <label htmlFor="name">Nome</label>
-            <input type="text" id="name" placeholder="Seu nome completo" />
-            <label htmlFor="email">Email</label>
-            <input type="email" id="email" placeholder="seu@email.com" />
-            <label htmlFor="message">Mensagem</label>
-            <textarea name="message" id="message">
-              Descreva como eu posso te ajudar...
-            </textarea>
+            <div className="input">
+              <label htmlFor="name">Nome</label>
+              <input type="text" id="name" placeholder="Seu nome completo" />
+            </div>
+            <div className="input">
+              <label htmlFor="email">Email</label>
+              <input type="email" id="email" placeholder="seu@email.com" />
+            </div>
+            <div className="input">
+              <label htmlFor="message">Mensagem</label>
+              <textarea
+                name="message"
+                id="message"
+                onChange={(e) => setTexto(e.target.value)}
+                value={texto}
+              />
+            </div>
+            <button className="is-active shadow" type="button">
+              Enviar Mensagem
+            </button>
           </form>
         </div>
       </div>

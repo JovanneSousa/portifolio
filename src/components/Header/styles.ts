@@ -1,11 +1,9 @@
 import styled from 'styled-components'
 import { colors } from '../../styles'
 
-interface HeaderProps {
-  scrolled: boolean
-}
-
-export const HeaderSection = styled.header<HeaderProps>`
+export const HeaderSection = styled.header.withConfig({
+  shouldForwardProp: (prop) => prop !== 'scrolled'
+})<{ scrolled: boolean }>`
   position: sticky;
   top: 0;
   padding: 16px 0;
@@ -39,11 +37,10 @@ export const HeaderSection = styled.header<HeaderProps>`
     li {
       padding: 8px 16px;
       border-radius: 8px;
-      
+
       .white {
         color: ${colors.white};
       }
     }
   }
-
 `
