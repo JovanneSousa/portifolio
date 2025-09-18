@@ -4,7 +4,7 @@ import { colors } from '../../styles'
 export const Container = styled.div`
   text-align: center;
   display: flex;
-  height: 90vh;
+  height: 93vh;
   align-items: center;
   justify-content: center;
 

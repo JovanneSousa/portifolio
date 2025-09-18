@@ -24,11 +24,11 @@ const About = () => {
             </p>
 
             <div className="stacks">
-              <div className="stack">
+              <div className="stack shadow">
                 <h4 className='front'>Frontend</h4>
                 <p>React, TypeScript, SASS</p>
               </div>
-              <div className="stack">
+              <div className="stack shadow">
                 <h4 className='back'>Backend</h4>
                 <p>Java, Spring Boot, APIs REST</p>
               </div>

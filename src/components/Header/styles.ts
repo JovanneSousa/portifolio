@@ -9,7 +9,7 @@ export const HeaderSection = styled.header<HeaderProps>`
   position: sticky;
   top: 0;
   padding: 16px 0;
-  height: 10vh;
+  height: 7vh;
   transition: background 0.3s ease, border-bottom 0.3s ease;
 
   backdrop-filter: ${({ scrolled }) => scrolled ? 'blur(7px)' : 'none'};
@@ -18,7 +18,7 @@ export const HeaderSection = styled.header<HeaderProps>`
     scrolled ? colors.transparentWhite : 'transparent'};
 
   border-bottom: ${({ scrolled }) =>
-    scrolled ? `1px solid ${colors.gray}` : 'none'};
+    scrolled ? `1px solid ${colors.border}` : 'none'};
 
   .container {
     display: flex;
