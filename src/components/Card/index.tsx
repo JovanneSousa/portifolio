@@ -1,5 +1,5 @@
 import { colors } from '../../styles'
-import { backendStacks, frontendStacks, toolsStacks, type Stack } from '../Data/StacksData'
+import { backendStacks, frontendStacks, toolsStacks, type Stack } from '../../Data/StacksData'
 import ProgressBar from '../ProgressBar'
 import { CardSection } from './styles'
 
