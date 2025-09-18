@@ -5,12 +5,14 @@ export const colors = {
   transparentWhite: "rgba(255, 255, 255, 0.8)",
   purple: '#B95EED',
   lightPurple: '#5649E6',
-  white: '#eeeeee',
+  white: '#ffffff',
   black: 'rgba(17, 17, 17, 1)',
   gray: '#6A7181',
   green: '#10ac84',
   lightGray: `#a3a3a3`,
-  background: `#EAEAF9`
+  background: `#EAEAF9`,
+  background2: `#F6F7F9`,
+  border: `#F4EAF9`
 }
 
 export const breakpoints = {
@@ -52,7 +54,7 @@ export const EstiloGlobal = createGlobalStyle`
     background-color: ${colors.white};
     padding:8px 16px;
     border-radius: 8px;
-    border: 1px solid ${colors.gray};
+    border: 1px solid ${colors.border};
     color: ${colors.gray};
 
     &:hover {

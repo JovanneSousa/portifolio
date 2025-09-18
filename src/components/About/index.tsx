@@ -12,8 +12,8 @@ const About = () => {
         <div className="about-section">
           <article className="description">
             <p>
-              Sou um desenvolvedor fullstack com experiência sólida em Java para
-              backend e React para frontend. Tenho paixão por criar aplicações
+              Sou um desenvolvedor fullstack com experiência sólida em <span className="java">Java</span> para
+              backend e <span className="react">React</span> para frontend. Tenho paixão por criar aplicações
               robustas, escaláveis e com excelente experiência do usuário.
             </p>
             <p>
@@ -23,13 +23,13 @@ const About = () => {
               completas.
             </p>
 
-            <div className="stack">
-              <div className="front">
-                <h4>Frontend</h4>
+            <div className="stacks">
+              <div className="stack">
+                <h4 className='front'>Frontend</h4>
                 <p>React, TypeScript, SASS</p>
               </div>
-              <div className="back">
-                <h4>Backend</h4>
+              <div className="stack">
+                <h4 className='back'>Backend</h4>
                 <p>Java, Spring Boot, APIs REST</p>
               </div>
             </div>
