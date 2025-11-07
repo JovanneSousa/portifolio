@@ -7,7 +7,6 @@ export const HeaderSection = styled.header.withConfig({
   position: sticky;
   top: 0;
   padding: 16px 0;
-  height: 7vh;
   transition: background 0.3s ease, border-bottom 0.3s ease;
 
   backdrop-filter: ${({ scrolled }) => (scrolled ? 'blur(7px)' : 'none')};

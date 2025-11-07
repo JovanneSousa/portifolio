@@ -4,7 +4,7 @@ import { colors } from '../../styles'
 export const ContactSection = styled.section`
   display: flex;
   align-items: center;
-  height: 90vh;
+  padding: 40px 0;
 
   h2 {
     color: ${colors.black};

@@ -2,9 +2,10 @@ import styled from 'styled-components'
 import { colors } from '../../styles'
 
 export const TecnologySection = styled.section`
+  overflow: hidden;
+  padding: 60px 0;
   display: flex;
   align-items: center;
-  height: 70vh;
 
   h2 {
     color: ${colors.black};

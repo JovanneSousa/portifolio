@@ -3,7 +3,7 @@ import { colors } from '../../styles'
 
 export const AboutSection = styled.section`
   background-color: ${colors.background2};
-  height: 90vh;
+  padding: 40px 0;
   text-align: center;
   display: flex;
   align-items: center;
