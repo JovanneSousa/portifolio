@@ -1,8 +1,14 @@
 import { createGlobalStyle } from 'styled-components'
+import { hexToRgb } from './utils'
 
 export const colors = {
-  gradientOne: `linear-gradient(45deg, #5649E6, #B95EED)`,
-  transparentWhite: "rgba(255, 255, 255, 0.8)",
+  techblue: '#3D8BFD',
+  techcyan: '#1ECBE1',
+  techgreen: '#199473',
+  fundo: '#0D1117',
+  gradientTwo: 'linear-gradient(180deg, #1F2533 0%, #141922 100%)',
+  gradientOne: `linear-gradient(135deg, #3d8bfd 0%, #1ecbe1 100%)`,
+  transparent: `rgba(${hexToRgb('#0D1117')}, 0.8)`,
   purple: '#B95EED',
   lightPurple: '#5649E6',
   white: '#ffffff',
@@ -12,8 +18,7 @@ export const colors = {
   lightGray: `#a3a3a3`,
   background: `#EAEAF9`,
   background2: `#F6F7F9`,
-  border: `#F4EAF9`,
-  footer: `#24212C`,
+  border: `#232730`,
   textFooter: `#D3D3D5`
 }
 
@@ -26,18 +31,22 @@ export const EstiloGlobal = createGlobalStyle`
   * {
     margin: 0;
     padding: 0;
-    font-family: roboto, sans-serif;
+    font-family: Space Grotesk, sans-serif;
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
   }
 
   body {
-    background-color: ${colors.background};
+    background: ${colors.fundo};
     color: ${colors.gray};
 
     a {
       color: ${colors.gray};
+
+      &:hover {
+        color: ${colors.techcyan};
+      }
     }
   }
 
@@ -57,15 +66,16 @@ export const EstiloGlobal = createGlobalStyle`
   }
 
   .btn {
-    background-color: ${colors.white};
+    background: ${colors.gradientTwo};
     padding:8px 16px;
     border-radius: 8px;
     border: 1px solid ${colors.border};
     color: ${colors.gray};
+    transition: all ease 0.3s;
 
     &:hover {
       color: ${colors.white};
-      background-color: ${colors.lightPurple};
+      border: 1px solid ${colors.white}; 
     }
   }
 
@@ -74,7 +84,8 @@ export const EstiloGlobal = createGlobalStyle`
     transition: box-shadow 0.3s ease;
 
     &:hover {
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 4px 12px rgba(${hexToRgb(colors.techcyan)}, .5);
+      border: 1px solid ${colors.techcyan};
     }
   }
 `

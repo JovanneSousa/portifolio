@@ -1,13 +1,15 @@
 import styled from 'styled-components'
-import { colors } from '../../styles'
+import { breakpoints, colors } from '../../styles'
+import { hexToRgb } from '../../utils'
 
 export const ContactSection = styled.section`
   display: flex;
   align-items: center;
   padding: 40px 0;
+  background: ${colors.gradientTwo};
 
   h2 {
-    color: ${colors.black};
+    color: ${colors.white};
     margin-bottom: 16px;
     font-size: 2.25rem;
 
@@ -19,8 +21,13 @@ export const ContactSection = styled.section`
   }
 
   .content {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 3rem;
+
+    @media (max-width: ${breakpoints.tablet}) {
+      grid-template-columns: 1fr;
+    }
   }
 
   .title {
@@ -28,12 +35,8 @@ export const ContactSection = styled.section`
     margin-bottom: 64px;
   }
 
-  .info {
-    max-width: 50%;
-  }
-
   h3 {
-    color: ${colors.black};
+    color: ${colors.white};
     font-size: 1.5rem;
     line-height: 2rem;
     margin-bottom: 24px;
@@ -57,9 +60,18 @@ export const ContactSection = styled.section`
   .info-rede {
     display: flex;
     margin-top: 16px;
+    padding: 16px;
+    background: ${colors.gradientTwo};
+    border-radius: 8px;
+    border: 1px solid ${colors.border};
+    transition: all 0.3s ease;
 
     .title-contact {
-      color: ${colors.black};
+      color: ${colors.gray};
+    }
+
+    .address {
+      color: ${colors.white};
     }
 
     .address,
@@ -67,6 +79,10 @@ export const ContactSection = styled.section`
       line-height: 1rem;
       font-size: 0.975rem;
       padding: 4px;
+    }
+
+    &:hover {
+      border: 1px solid ${colors.techcyan};
     }
   }
 
@@ -86,8 +102,7 @@ export const ContactSection = styled.section`
   }
 
   form {
-    background-color: ${colors.white};
-    width: 50%;
+    background: ${colors.gradientTwo};
     border-radius: 16px;
     border: 1px solid ${colors.border};
     padding: 24px;
@@ -95,17 +110,19 @@ export const ContactSection = styled.section`
 
   input,
   textarea {
-    background-color: ${colors.background2};
+    background-color: ${colors.fundo};
     display: block;
     margin-top: 8px;
     padding: 8px 16px;
     border-radius: 8px;
     border: 1px solid ${colors.border};
     width: 100%;
-    color: ${colors.gray};
+    color: ${colors.lightGray};
+    font-size: 16px;
+
     &:focus {
-      border: 2px solid ${colors.purple};
-      outline-color: ${colors.purple};
+      border-color: ${colors.techcyan};
+      outline: none;
     }
   }
 
@@ -115,15 +132,23 @@ export const ContactSection = styled.section`
   }
 
   label {
-    color: ${colors.black};
+    color: ${colors.white};
   }
 
   button {
     width: 100%;
     border-radius: 8px;
-    padding: 16px;
+    padding: 8px 16px;
     border: none;
     cursor: pointer;
+    color: ${colors.black};
+    font-weight: bold;
+    font-size: 16px;
+    transition: all 0.5s ease;
+
+    &:hover {
+      box-shadow: 0 0 20px rgba(${hexToRgb(colors.techcyan)}, 0.5);
+    }
   }
 
   .shadow {

@@ -3,10 +3,11 @@ import { HeaderSection } from './styles'
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false)
+  const [isOpen, setIsOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 0) // atualiza o estado com true/false
+      setScrolled(window.scrollY > 0)
     }
 
     window.addEventListener('scroll', handleScroll)
@@ -14,25 +15,45 @@ const Header = () => {
   }, [])
 
   return (
-    <HeaderSection scrolled={scrolled}>
+    <HeaderSection scrolled={scrolled} open={isOpen}>
       <div className="container">
-        <h1>Portifólio</h1>
+        <h1>{'<Jovanne Dev/>'}</h1>
+        <div className="hamburger" onClick={() => setIsOpen(!isOpen)}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
         <nav>
           <ul>
             <li>
-              <a href="#inicio">Início</a>
+              <a onClick={() => setIsOpen(!isOpen)} href="#inicio">
+                Início
+              </a>
             </li>
             <li>
-              <a href="#sobre"> Sobre</a>
+              <a onClick={() => setIsOpen(!isOpen)} href="#sobre">
+                {' '}
+                Sobre
+              </a>
             </li>
             <li>
-              <a href="#tecnologia">Tecnologias</a>
+              <a onClick={() => setIsOpen(!isOpen)} href="#tecnologia">
+                Tecnologias
+              </a>
             </li>
             <li>
-              <a href="#projeto">Projeto</a>
+              <a onClick={() => setIsOpen(!isOpen)} href="#projeto">
+                Projeto
+              </a>
             </li>
             <li className="is-active">
-              <a href="#contato" className='white'>Contato</a>
+              <a
+                onClick={() => setIsOpen(!isOpen)}
+                href="#contato"
+                className="white"
+              >
+                Contato
+              </a>
             </li>
           </ul>
         </nav>

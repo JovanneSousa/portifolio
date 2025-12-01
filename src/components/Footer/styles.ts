@@ -1,8 +1,8 @@
 import styled from 'styled-components'
-import { colors } from '../../styles'
+import { breakpoints, colors } from '../../styles'
 
 export const FooterSection = styled.footer`
-  background-color: ${colors.footer};
+  background-color: ${colors.fundo};
   display: flex;
   align-items: center;
   padding: 32px 24px;
@@ -22,6 +22,12 @@ export const FooterSection = styled.footer`
       background: ${colors.gradientOne};
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+    }
+
+    @media (max-width: ${breakpoints.tablet}) {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
     }
   }
 
@@ -48,5 +54,9 @@ export const FooterSection = styled.footer`
     &:hover {
         color: ${colors.white};
     }
+  }
+
+  
+  @media (max-width: ${breakpoints.tablet}) {
   }
 `

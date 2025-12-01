@@ -99,7 +99,7 @@ const Contact = () => {
                 value={texto}
               />
             </div>
-            <button className="is-active shadow" type="button">
+            <button className="is-active" type="button">
               Enviar Mensagem
             </button>
           </form>

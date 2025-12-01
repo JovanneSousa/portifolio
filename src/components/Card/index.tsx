@@ -11,13 +11,13 @@ const Card: React.FC<CardProps> = ({ type }) => {
   const getColor = () => {
     switch (type) {
       case 'Frontend':
-        return colors.purple
+        return colors.gradientOne
       case 'Backend':
-        return colors.lightPurple
+        return colors.gradientOne
       case 'Database & Tools':
-        return colors.black
+        return colors.gradientOne
       default:
-        return colors.gray
+        return colors.gradientOne
     }
   }
 
@@ -29,7 +29,7 @@ const Card: React.FC<CardProps> = ({ type }) => {
       : toolsStacks;
 
   return (
-    <CardSection type={type}>
+    <CardSection className='shadow' type={type}>
         <h3>{type}</h3>
       {stacks.map((stack) => (
         <div className="stack" key={stack.name}>

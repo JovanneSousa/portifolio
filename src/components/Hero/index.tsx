@@ -1,21 +1,32 @@
-import { Container } from "./styles";
+import { Container } from './styles'
 
 const Hero = () => {
-    return (
-        <Container id="inicio">
-            <div>
-                <div className="titleContainer">
-                <h2 className="title">Desenvolvedor</h2>
-                <h2 className="subTitle">Fullstack</h2>
-            </div>
-            <p>Especialista em <span>Java</span> e <span>React</span>, criando soluções completas e <br /> inovadoras do backend ao frontend.</p>
-            <div className="buttonContainer">
-                <a href="#projeto" className="is-active shadow">Ver Projetos</a>
-                <a href="#contato" className="btn">Entrar em Contato</a>
-            </div>
-            </div>
-        </Container>
-    )
+  return (
+    <Container id="inicio">
+      <div className="background">
+        <div className="circle circle1"></div>
+        <div className="circle circle2"></div>
+      </div>
+
+      <div className="content">
+        <p className="color hi">Olá, eu sou Jovanne</p>
+        <h1 className="color dev">Desenvolvedor</h1>
+        <p className="dev">Full Stack</p>
+        <p className="desc">
+          Especializado em criar aplicações web modernas e escaláveis com as
+          melhores tecnologias do mercado
+        </p>
+      </div>
+      <div className="buttonContainer">
+        <a href="#projeto" className="is-active shadow">
+          Ver Projetos
+        </a>
+        <a href="#contato" className="btn shadow">
+          Entrar em Contato
+        </a>
+      </div>
+    </Container>
+  )
 }
 
-export default Hero;
+export default Hero

@@ -1,45 +1,133 @@
 import styled from 'styled-components'
-import { colors } from '../../styles'
+import { breakpoints, colors } from '../../styles'
 
 export const Container = styled.div`
-  text-align: center;
   display: flex;
-  height: 93vh;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background: #0d1117;
+  color: #f8fafc;
+  min-height: calc(100vh - 70px);
+  gap: 32px;
 
-  .titleContainer {
-    margin-bottom: 24px;
+  .hi {
+    font-weight: bold;
+    font-size: 22px;
   }
 
-  .title {
-    color: ${colors.black};
-    font-size: 5rem;
+  .dev {
+    font-size: 72px;
+    font-weight: bold;
+
+    @media (max-width: ${breakpoints.tablet}) {
+      font-size: 48px;
+    }
   }
 
-  .subTitle {
+  .color {
     background: ${colors.gradientOne};
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 4.5rem;
+  }
+
+  .desc {
+    color: ${colors.gray};
+    font-size: 24px;
+    max-width: 650px;
+
+        @media (max-width: ${breakpoints.tablet}) {
+      font-size: 18px;
+    }
   }
 
   .buttonContainer {
     display: flex;
     gap: 1rem;
     justify-content: center;
+    z-index: 1;
+
+    a {
+      text-decoration: none;
+      padding: 12px 32px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .is-active {
+      color: ${colors.black};
+    }
   }
 
-  a {
-    text-decoration: none;
-
-    padding: 12px 32px;
-    border-radius: 8px;
+  .background {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
   }
 
-  p {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-    margin-bottom: 32px;
+  .circle {
+    position: absolute;
+    width: 24rem;
+    height: 24rem;
+    border-radius: 50%;
+    filter: blur(60px);
+    animation: pulse 4s ease-in-out infinite;
+  }
+
+  .circle1 {
+    top: 25%;
+    left: 25%;
+    background: rgba(61, 139, 253, 0.3);
+  }
+
+  .circle2 {
+    bottom: 25%;
+    right: 25%;
+    background: rgba(30, 203, 225, 0.3);
+    animation-delay: 2s;
+  }
+
+  .content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    animation: fadeIn 1.5s ease-out forwards;
+    max-width: 100%;
+  }
+
+  @keyframes pulse {
+    0%,
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 0.7;
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes bounce {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-12px);
+    }
   }
 `

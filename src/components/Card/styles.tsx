@@ -1,28 +1,23 @@
 import styled from 'styled-components'
 import { colors } from '../../styles'
+import { hexToRgb } from '../../utils'
 
 interface CardSectionProps {
   type: 'Frontend' | 'Backend' | 'Database & Tools'
 }
 
 export const CardSection = styled.div<CardSectionProps>`
-  background-color: ${colors.background2};
+  background: ${colors.gradientTwo};
   border-radius: 16px;
   height: 366px;
   border: 1px solid ${colors.border};
   width: 100%;
   padding: 24px;
-  color: ${({ type }) =>
-    type === 'Frontend'
-      ? colors.purple
-      : type === 'Backend'
-      ? colors.lightPurple
-      : type === 'Database & Tools'
-      ? colors.black
-      : colors.gray};
+  color: ${colors.techcyan};
+  transition: all 0.3s ease;
 
   h4 {
-    color: ${colors.black};
+    color: ${colors.white};
     font-size: 0.925rem;
   }
 
@@ -43,5 +38,9 @@ export const CardSection = styled.div<CardSectionProps>`
   .porcent {
     color: ${colors.gray};
     font-size: 0.925rem;
+  }
+
+  &:hover {
+    box-shadow: 0 0 30px rgba(${hexToRgb(colors.techcyan)}, 0.5);
   }
 `

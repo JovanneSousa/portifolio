@@ -10,7 +10,7 @@ export const Container = styled.div`
 
 export const Filler = styled.div<{ value: number; color: string }>`
   width: ${({ value }) => Math.min(Math.max(value, 0), 100)}%;
-  background-color: ${({ color }) => color};
+  background: ${({ color }) => color};
   height: 100%;
   transition: width 0.3s ease;
 `;
