@@ -52,6 +52,8 @@ export const ProjectsContainer = styled.section`
           display: flex;
           gap: 10px;
           margin-bottom: 16px;
+          max-width: 100%;
+          flex-wrap: wrap;
 
           span {
             background-color: rgba(${hexToRgb(colors.techcyan)}, 0.2);

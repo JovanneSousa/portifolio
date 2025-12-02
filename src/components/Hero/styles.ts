@@ -47,7 +47,7 @@ export const Container = styled.div`
     display: flex;
     gap: 1rem;
     justify-content: center;
-    z-index: 1;
+    margin-top: 16px;
 
     a {
       text-decoration: none;
@@ -96,6 +96,10 @@ export const Container = styled.div`
     text-align: center;
     animation: fadeIn 1.5s ease-out forwards;
     max-width: 100%;
+
+    @media (max-width: ${breakpoints.tablet}) {
+      padding: 0 16px;
+    }
   }
 
   @keyframes pulse {

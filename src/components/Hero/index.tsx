@@ -16,14 +16,14 @@ const Hero = () => {
           Especializado em criar aplicações web modernas e escaláveis com as
           melhores tecnologias do mercado
         </p>
-      </div>
-      <div className="buttonContainer">
-        <a href="#projeto" className="is-active shadow">
-          Ver Projetos
-        </a>
-        <a href="#contato" className="btn shadow">
-          Entrar em Contato
-        </a>
+        <div className="buttonContainer">
+          <a href="#projeto" className="is-active shadow">
+            Ver Projetos
+          </a>
+          <a href="#contato" className="btn shadow">
+            Entrar em Contato
+          </a>
+        </div>
       </div>
     </Container>
   )
