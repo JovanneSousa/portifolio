@@ -9,17 +9,6 @@ export const AboutSection = styled.section`
   align-items: center;
   justify-content: center;
 
-  h2 {
-    color: ${colors.black};
-    font-size: 2.25rem;
-    margin-bottom: 16px;
-
-    span {
-      background: ${colors.gradientOne};
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-  }
   .about-section {
     display: flex;
     gap: 3rem;

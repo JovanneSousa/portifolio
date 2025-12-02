@@ -50,6 +50,42 @@ export const EstiloGlobal = createGlobalStyle`
     }
   }
 
+  
+
+  .title {
+    text-align: center;
+    margin-bottom: 64px;
+
+    h2 {
+      color: ${colors.white};
+      margin-bottom: 16px;
+      font-size: 48px;
+  
+      span {
+        background: ${colors.gradientOne};
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+
+  button {
+    width: 100%;
+    border-radius: 8px;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    color: ${colors.black};
+    font-weight: bold;
+    font-size: 16px;
+    transition: all 0.5s ease;
+
+    &:hover {
+      box-shadow: 0 0 20px rgba(${hexToRgb(colors.techcyan)}, 0.5);
+    }
+  }
+
+
   .container {
     max-width: 1024px;
     width: 100%;

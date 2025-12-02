@@ -1,24 +1,11 @@
 import styled from 'styled-components'
 import { breakpoints, colors } from '../../styles'
-import { hexToRgb } from '../../utils'
 
 export const ContactSection = styled.section`
   display: flex;
   align-items: center;
   padding: 40px 0;
   background: ${colors.gradientTwo};
-
-  h2 {
-    color: ${colors.white};
-    margin-bottom: 16px;
-    font-size: 2.25rem;
-
-    span {
-      background: ${colors.gradientOne};
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-  }
 
   .content {
     display: grid;
@@ -28,11 +15,6 @@ export const ContactSection = styled.section`
     @media (max-width: ${breakpoints.tablet}) {
       grid-template-columns: 1fr;
     }
-  }
-
-  .title {
-    text-align: center;
-    margin-bottom: 64px;
   }
 
   h3 {
@@ -133,22 +115,6 @@ export const ContactSection = styled.section`
 
   label {
     color: ${colors.white};
-  }
-
-  button {
-    width: 100%;
-    border-radius: 8px;
-    padding: 8px 16px;
-    border: none;
-    cursor: pointer;
-    color: ${colors.black};
-    font-weight: bold;
-    font-size: 16px;
-    transition: all 0.5s ease;
-
-    &:hover {
-      box-shadow: 0 0 20px rgba(${hexToRgb(colors.techcyan)}, 0.5);
-    }
   }
 
   .shadow {

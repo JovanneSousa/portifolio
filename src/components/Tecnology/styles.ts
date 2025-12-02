@@ -7,27 +7,10 @@ export const TecnologySection = styled.section`
   display: flex;
   align-items: center;
 
-  h2 {
-    color: ${colors.white};
-    margin-bottom: 16px;
-    font-size: 48px;
-
-    span {
-      background: ${colors.gradientOne};
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-  }
-
   p {
     font-size: 22px;
   }
-
-  .title {
-    text-align: center;
-    margin-bottom: 64px;
-  }
-
+  
   .card-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
