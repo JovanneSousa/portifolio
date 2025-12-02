@@ -21,6 +21,7 @@ export const HeaderSection = styled.header.withConfig({
     display: flex;
     justify-content: space-between;
   }
+
   h1 {
     background: ${colors.gradientOne};
     -webkit-background-clip: text;
@@ -70,13 +71,15 @@ export const HeaderSection = styled.header.withConfig({
       background: ${({ scrolled }) =>
         scrolled ? colors.transparent : colors.fundo};
       width: 100%;
-      padding: ${({ open }) =>
-        open ? '16px' : '0'};
+      padding: ${({ open }) => (open ? '16px' : '0')};
       border-radius: 8px;
       transition: max-height 0.3s ease, padding 0.3s ease;
     }
 
     .hamburger {
+      position: absolute;
+      right: 32px;
+      top: 30%;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
