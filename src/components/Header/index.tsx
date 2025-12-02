@@ -30,12 +30,7 @@ const Header = () => {
                 Início
               </a>
             </li>
-            <li>
-              <a onClick={() => setIsOpen(!isOpen)} href="#sobre">
-                {' '}
-                Sobre
-              </a>
-            </li>
+            
             <li>
               <a onClick={() => setIsOpen(!isOpen)} href="#tecnologia">
                 Tecnologias
@@ -44,6 +39,11 @@ const Header = () => {
             <li>
               <a onClick={() => setIsOpen(!isOpen)} href="#projeto">
                 Projeto
+              </a>
+            </li>
+            <li>
+              <a onClick={() => setIsOpen(!isOpen)} href="#cursos">
+                Cursos
               </a>
             </li>
             <li className="is-active">

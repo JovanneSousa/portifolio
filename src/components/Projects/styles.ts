@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import { breakpoints, colors } from '../../styles'
-import { hexToRgb } from '../../utils'
 
 export const ProjectsContainer = styled.section`
   background: ${colors.gradientTwo};
@@ -19,6 +18,11 @@ export const ProjectsContainer = styled.section`
       background: ${colors.gradientTwo};
       overflow: hidden;
       cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        border: 1px solid ${colors.techcyan};
+      }
 
       .container-img-proj img {
         width: 100%;
@@ -47,29 +51,11 @@ export const ProjectsContainer = styled.section`
           text-overflow: ellipsis;
           margin-bottom: 24px;
         }
-
-        .tech {
-          display: flex;
-          gap: 10px;
-          margin-bottom: 16px;
-          max-width: 100%;
-          flex-wrap: wrap;
-
-          span {
-            background-color: rgba(${hexToRgb(colors.techcyan)}, 0.2);
-            border: 1px solid ${colors.techcyan};
-            border-radius: 16px;
-            padding: 2px 10px;
-            color: ${colors.techcyan};
-            font-weight: bold;
-            font-size: 12px;
-          }
-        }
       }
     }
 
     @media (max-width: ${breakpoints.tablet}) {
-        grid-template-columns: 1fr;
+      grid-template-columns: 1fr;
     }
   }
 `

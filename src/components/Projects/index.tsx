@@ -2,7 +2,7 @@ import { ProjectsContainer } from './styles'
 
 const Projects = () => {
   return (
-    <ProjectsContainer>
+    <ProjectsContainer id='projeto'>
       <div className="container">
         <div className="title">
           <h2>

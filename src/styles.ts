@@ -124,4 +124,22 @@ export const EstiloGlobal = createGlobalStyle`
       border: 1px solid ${colors.techcyan};
     }
   }
+
+  .tech {
+          display: flex;
+          gap: 10px;
+          margin-bottom: 16px;
+          max-width: 100%;
+          flex-wrap: wrap;
+
+          >span {
+            background-color: rgba(${hexToRgb(colors.techcyan)}, 0.2);
+            border: 1px solid ${colors.techcyan};
+            border-radius: 16px;
+            padding: 2px 10px;
+            color: ${colors.techcyan};
+            font-weight: bold;
+            font-size: 12px;
+          }
+        }
 `
