@@ -2,7 +2,7 @@ import { ContainerExperience } from './styles'
 
 const Experience = () => {
   return (
-    <ContainerExperience>
+    <ContainerExperience id='experiencias'>
       <div className="container">
         <div className="title">
           <h2>

@@ -5,6 +5,13 @@ import { hexToRgb } from '../../utils'
 export const CourseContainer = styled.section`
   padding: 40px 0;
 
+  .title-formation {
+    color: ${colors.white};
+    margin-bottom: 32px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
   .container-card {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -14,12 +21,18 @@ export const CourseContainer = styled.section`
       grid-template-columns: 1fr;
     }
 
+    .ens {
+      .card {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
     .card {
       padding: 24px;
       border-radius: 8px;
       border: 1px solid ${colors.border};
       background: ${colors.gradientTwo};
-      transition: all .3s ease;
+      transition: all 0.3s ease;
       display: flex;
       flex-direction: column;
       justify-content: space-between;

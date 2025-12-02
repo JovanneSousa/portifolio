@@ -46,6 +46,11 @@ const Header = () => {
                 Cursos
               </a>
             </li>
+            <li>
+              <a onClick={() => setIsOpen(!isOpen)} href="#experiencias">
+                Experiências
+              </a>
+            </li>
             <li className="is-active">
               <a
                 onClick={() => setIsOpen(!isOpen)}
