@@ -6,10 +6,6 @@ export const TecnologySection = styled.section`
   padding: 60px 0;
   display: flex;
   align-items: center;
-
-  p {
-    font-size: 22px;
-  }
   
   .card-container {
     display: grid;

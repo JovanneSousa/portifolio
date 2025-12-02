@@ -1,5 +1,6 @@
 import Contact from './components/Contact'
 import Courses from './components/Courses'
+import Experience from './components/Experience'
 import Footer from './components/Footer'
 import Header from './components/Header'
 import Hero from './components/Hero'
@@ -16,6 +17,7 @@ function App() {
       <Tecnology />
       <Projects />
       <Courses />
+      <Experience />
       <Contact />
       <Footer />
     </>

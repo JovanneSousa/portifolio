@@ -55,11 +55,16 @@ export const EstiloGlobal = createGlobalStyle`
   .title {
     text-align: center;
     margin-bottom: 64px;
+    
+  p {
+    font-size: 22px;
+  }
 
     h2 {
       color: ${colors.white};
       margin-bottom: 16px;
       font-size: 48px;
+      
   
       span {
         background: ${colors.gradientOne};
