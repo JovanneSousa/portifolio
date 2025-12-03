@@ -38,12 +38,12 @@ const Header = () => {
             </li>
             <li>
               <a onClick={() => setIsOpen(!isOpen)} href="#projeto">
-                Projeto
+                Projetos
               </a>
             </li>
             <li>
               <a onClick={() => setIsOpen(!isOpen)} href="#cursos">
-                Cursos
+                Formação
               </a>
             </li>
             <li>

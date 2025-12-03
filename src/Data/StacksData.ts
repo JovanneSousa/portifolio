@@ -6,25 +6,25 @@ export interface Stack {
 export const frontendStacks: Stack[] = [
   { name: 'React', value: 75 },
   { name: 'TypeScript', value: 80 },
-  { name: 'JavaScript', value: 83 },
+  { name: 'JQuery', value: 83 },
   { name: 'Bootstrap', value: 70 },
   { name: 'HTML/CSS', value: 90 }
 ]
 
 export const backendStacks: Stack[] = [
-  { name: 'Java', value: 80 },
-  { name: 'Spring Boot', value: 75 },
+  { name: '.NET Core', value: 72 },
+  {name: 'ASP.NET MVC', value: 72},
+  { name: 'C#', value: 80 },
+  { name: 'ORMs', value: 75 },
   { name: 'APIs REST', value: 70 },
-  { name: 'Microsserviços', value: 80 },
-  { name: 'Maven', value: 72 }
 ]
 
 export const toolsStacks: Stack[] = [
+  { name: 'SqlServer', value: 75 },
   { name: 'PostgreSQL', value: 85 },
   { name: 'MySQL', value: 70 },
-  { name: 'Docker', value: 60 },
+  { name: 'Azure', value: 60 },
   { name: 'Git', value: 90 },
-  { name: 'Linux', value: 75 }
 ]
 
 type Curso = {
@@ -106,7 +106,7 @@ export const cursos: Curso[] = [
     plataforma: 'Dio',
     horas: 93,
     ano: '2025',
-    tecnologias: ['C#', '.NET', 'Azure'],
+    tecnologias: ['C#', '.NET','Entity Framework', 'SqlServer', 'MongoDb', 'xUnit', 'Azure'],
     certificado: 'https://hermes.dio.me/certificates/KRRAMPYP.pdf'
   },
   {
@@ -115,7 +115,7 @@ export const cursos: Curso[] = [
     plataforma: 'EBAC',
     horas: 89,
     ano: '2025',
-    tecnologias: ['React', 'Java', 'SpringBoot', 'BootStrap', 'JQuery'],
+    tecnologias: ['React', 'Java', 'SpringBoot', 'BootStrap', 'JQuery', 'MongoDb', 'Padrões de projetos', 'Clean Code'],
     certificado:
       'https://static.lms.ebaconline.com.br/certs/course/b715045e-7a55-45f9-8dd6-84171739ba7c/original.pdf?1758200013528'
   },
