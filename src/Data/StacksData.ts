@@ -37,6 +37,59 @@ type Curso = {
   certificado: string
 }
 
+type Experiencia = {
+  id: number
+  titulo: string
+  empresa: string
+  descricao: string
+  ferramentas: string[]
+  inicio: string
+  fim: string
+}
+
+export const experiencia: Experiencia[] = [
+  {
+    id: 1,
+    titulo: 'Estágio em Desenvolvimento',
+    empresa: 'Redeflex',
+    descricao:
+      'Atuo na construção de novas funcionalidades usando a PowerPlataform, estruturo querys no SqlServer visando integridade dos dados sob supervisão, aprendizado contínuo na área de desenvolvimento',
+    ferramentas: ['PowerApps', 'PowerAutomate', 'SqlServer'],
+    inicio: '10/2025',
+    fim: 'Atualmente'
+  },
+  {
+    id: 2,
+    titulo: 'Analista de Suporte',
+    empresa: 'Infrawise',
+    descricao:
+      'Atendimento usuários, Administração servidores Windows e redes, documentação de processos e garantia estabilidade dos sistemas.',
+    ferramentas: ['Linux Server', 'Windows Server', 'Redes'],
+    inicio: '02/2025',
+    fim: '09/2025'
+  },
+  {
+    id: 3,
+    titulo: 'Assistente de Informática',
+    empresa: 'Atacadão',
+    descricao:
+      'Liderança na área de TI, tomava decisões técnicas e estratégicas e aplicava melhorias contínuas nos processos.',
+    ferramentas: ['Liderança', 'Comunicação', 'Tomada de decisão'],
+    inicio: '04/2024',
+    fim: '02/2025'
+  },
+  {
+    id: 4,
+    titulo: 'Auxiliar de Informática',
+    empresa: 'Atacadão',
+    descricao:
+      'Atendimento de demandas técnicas diárias, resolução de problemas, organização de tarefas e documentação de processos, sempre com comunicação clara e trabalho em equipe.',
+    ferramentas: ['Linux Server', 'Windows Server', 'ShellScript', 'Hardware'],
+    inicio: '03/2024',
+    fim: '06/2022'
+  }
+]
+
 export const cursos: Curso[] = [
   {
     id: 1,
@@ -63,7 +116,8 @@ export const cursos: Curso[] = [
     horas: 89,
     ano: '2025',
     tecnologias: ['React', 'Java', 'SpringBoot', 'BootStrap', 'JQuery'],
-    certificado: 'https://static.lms.ebaconline.com.br/certs/course/b715045e-7a55-45f9-8dd6-84171739ba7c/original.pdf?1758200013528'
+    certificado:
+      'https://static.lms.ebaconline.com.br/certs/course/b715045e-7a55-45f9-8dd6-84171739ba7c/original.pdf?1758200013528'
   },
   {
     id: 4,

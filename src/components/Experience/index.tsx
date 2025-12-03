@@ -1,8 +1,9 @@
+import { experiencia } from '../../Data/StacksData'
 import { ContainerExperience } from './styles'
 
 const Experience = () => {
   return (
-    <ContainerExperience id='experiencias'>
+    <ContainerExperience id="experiencias">
       <div className="container">
         <div className="title">
           <h2>
@@ -11,94 +12,27 @@ const Experience = () => {
           <p>Minha jornada no mercado de trabalho</p>
         </div>
         <div className="timeline">
-          <div className="timeline-item">
-            <div className="timeline-card shadow">
-              <div className="flex">
-                <div>
-                  <p className="cargo">Estágio em Desenvolvimento</p>
-                  <p className="empresa">Redeflex</p>
+          {experiencia.map((e) => (
+            <div className="timeline-item" key={e.id}>
+              <div className="timeline-card shadow">
+                <div className="flex">
+                  <div>
+                    <p className="cargo">{e.titulo}</p>
+                    <p className="empresa">{e.empresa}</p>
+                  </div>
+                  <span className="periodo">
+                    {e.inicio} - {e.fim}
+                  </span>
                 </div>
-                <span className="periodo">outubro de 2025 - Atualmente</span>
-              </div>
-              <p className="desc">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Quisquam dolorum culpa praesentium! Dolorum eligendi corporis
-                enim blanditiis, ea, doloribus incidunt velit amet sed provident
-                consequuntur, labore suscipit magnam at alias.
-              </p>
-              <div className="tech">
-                <span>Teste</span>
-                <span>Teste</span>
-                <span>Teste</span>
+                <p className="desc">{e.descricao}</p>
+                <div className="tech">
+                  {e.ferramentas.map((f) => (
+                    <span>{f}</span>
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
-          <div className="timeline-item">
-            <div className="timeline-card shadow">
-              <div className="flex">
-                <div>
-                  <p className="cargo">Estágio em Desenvolvimento</p>
-                  <p className="empresa">Redeflex</p>
-                </div>
-                <span className="periodo">outubro de 2025 - Atualmente</span>
-              </div>
-              <p className="desc">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Quisquam dolorum culpa praesentium! Dolorum eligendi corporis
-                enim blanditiis, ea, doloribus incidunt velit amet sed provident
-                consequuntur, labore suscipit magnam at alias.
-              </p>
-              <div className="tech">
-                <span>Teste</span>
-                <span>Teste</span>
-                <span>Teste</span>
-              </div>
-            </div>
-          </div>
-          <div className="timeline-item">
-            <div className="timeline-card shadow">
-              <div className="flex">
-                <div>
-                  <p className="cargo">Estágio em Desenvolvimento</p>
-                  <p className="empresa">Redeflex</p>
-                </div>
-                <span className="periodo">outubro de 2025 - Atualmente</span>
-              </div>
-              <p className="desc">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Quisquam dolorum culpa praesentium! Dolorum eligendi corporis
-                enim blanditiis, ea, doloribus incidunt velit amet sed provident
-                consequuntur, labore suscipit magnam at alias.
-              </p>
-              <div className="tech">
-                <span>Teste</span>
-                <span>Teste</span>
-                <span>Teste</span>
-              </div>
-            </div>
-          </div>
-          <div className="timeline-item">
-            <div className="timeline-card shadow">
-              <div className="flex">
-                <div>
-                  <p className="cargo">Estágio em Desenvolvimento</p>
-                  <p className="empresa">Redeflex</p>
-                </div>
-                <span className="periodo">10/2025 - Atualmente</span>
-              </div>
-              <p className="desc">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Quisquam dolorum culpa praesentium! Dolorum eligendi corporis
-                enim blanditiis, ea, doloribus incidunt velit amet sed provident
-                consequuntur, labore suscipit magnam at alias.
-              </p>
-              <div className="tech">
-                <span>Teste</span>
-                <span>Teste</span>
-                <span>Teste</span>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </ContainerExperience>
