@@ -12,6 +12,26 @@ export const CourseContainer = styled.section`
     font-weight: bold;
   }
 
+  .ens {
+    margin-bottom: 40px;
+
+    .container-card {
+      grid-template-columns: 1fr 1fr;
+
+      .title-course {
+        font-size: 16px;
+      }
+
+      span, .tech {
+        margin: 0;
+      }
+
+      @media (max-width: ${breakpoints.tablet}) {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+
   .container-card {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -19,12 +39,6 @@ export const CourseContainer = styled.section`
 
     @media (max-width: ${breakpoints.tablet}) {
       grid-template-columns: 1fr;
-    }
-
-    .ens {
-      .card {
-        grid-template-columns: 1fr 1fr;
-      }
     }
 
     .card {
@@ -57,6 +71,8 @@ export const CourseContainer = styled.section`
         display: flex;
         font-size: 12px;
         justify-content: space-between;
+        align-items: center;
+
         a {
           font-size: 12px;
           color: ${colors.techcyan};
