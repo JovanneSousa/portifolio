@@ -1,14 +1,51 @@
 import styled from 'styled-components'
-import { breakpoints, colors } from '../../styles'
+import { colors } from '../../styles'
 
 export const ProjectsContainer = styled.section`
   background: ${colors.gradientTwo};
   padding: 40px 0;
+  z-index: 0;
 
-  .container-proj {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
+  .carousel {
+    padding-bottom: 40px;
+    position: relative;
+    z-index: 0;
+
+    .swiper {
+      position: relative;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      top: 40%;
+      color: ${colors.techcyan};
+      z-index: 1;
+    }
+
+    .swiper-button-prev {
+      left: 0px;
+      transform: scaleX(-1);
+    }
+
+    .swiper-button-next {
+      right: 0px;
+    }
+
+    .swiper-pagination-bullet-active {
+      background: ${colors.techcyan};
+    }
+
+    .swiper-slide {
+      height: auto;
+      display: flex;
+    }
 
     .proj {
       border-radius: 8px;
@@ -16,6 +53,7 @@ export const ProjectsContainer = styled.section`
       display: flex;
       flex-direction: column;
       background: ${colors.gradientTwo};
+      width: 100%;
       overflow: hidden;
       cursor: pointer;
       transition: all 0.3s ease;
@@ -52,10 +90,6 @@ export const ProjectsContainer = styled.section`
           margin-bottom: 24px;
         }
       }
-    }
-
-    @media (max-width: ${breakpoints.tablet}) {
-      grid-template-columns: 1fr;
     }
   }
 `

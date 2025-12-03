@@ -1,8 +1,12 @@
 import { ProjectsContainer } from './styles'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Navigation, Pagination } from 'swiper/modules'
+import 'swiper/css'
+import { projetos } from '../../Data/StacksData'
 
 const Projects = () => {
   return (
-    <ProjectsContainer id='projeto'>
+    <ProjectsContainer id="projeto">
       <div className="container">
         <div className="title">
           <h2>
@@ -13,70 +17,45 @@ const Projects = () => {
             tecnologias
           </p>
         </div>
-        <div className="container-proj">
-          <div className="proj shadow">
-            <div className="container-img-proj">
-              <img src="https://placehold.co/300x200" alt="placeholder" />
-            </div>
-            <div className="content">
-              <p className="system-name">Sistema de exemplo</p>
-              <p className="sys-desc">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
-                optio, temporibus architecto aut quos amet placeat quaerat qui
-                aperiam, ad officiis nostrum quas magnam accusantium accusamus
-                non quidem iusto. Illum.
-              </p>
-              <div className="tech">
-                <span>java</span>
-                <span>bootstrap</span>
-                <span>PostgreSql</span>
-              </div>
-              <button className="is-active">Ver detalhes</button>
-            </div>
+        <Swiper
+          modules={[Navigation, Pagination]}
+          spaceBetween={20}
+          slidesPerView={3}
+          navigation
+          pagination={{ clickable: true }}
+          loop
+          grabCursor={true}
+          breakpoints={{
+            0: { slidesPerView: 1 },
+            1024: { slidesPerView: 3 }
+          }}
+          className="carousel"
+        >
+          <div className="hidden">
+            {projetos.map((p) => (
+              <SwiperSlide key={p.id}>
+                <div className="proj shadow">
+                  <div className="container-img-proj">
+                    <img src={p.img} alt="placeholder" />
+                  </div>
+                  <div className="content">
+                    <p className="system-name">{p.title}</p>
+                    <p className="sys-desc">{p.desc}</p>
+                    <div className="tech">
+                      {p.tech.map((t) => (
+                        <span>{t}</span>
+                      ))}
+                    </div>
+                    <button className="is-active">Ver detalhes</button>
+                  </div>
+                </div>
+              </SwiperSlide>
+            ))}
           </div>
-          <div className="proj shadow">
-            <div className="container-img-proj">
-              <img src="https://placehold.co/300x200" alt="placeholder" />
-            </div>
-            <div className="content">
-              <p className="system-name">Sistema de exemplo</p>
-              <p className="sys-desc">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
-                optio, temporibus architecto aut quos amet placeat quaerat qui
-                aperiam, ad officiis nostrum quas magnam accusantium accusamus
-                non quidem iusto. Illum.
-              </p>
-              <div className="tech">
-                <span>java</span>
-                <span>bootstrap</span>
-                <span>PostgreSql</span>
-              </div>
-              <button className="is-active">Ver detalhes</button>
-            </div>
-          </div>
-          <div className="proj shadow">
-            <div className="container-img-proj">
-              <img src="https://placehold.co/300x200" alt="placeholder" />
-            </div>
-            <div className="content">
-              <p className="system-name">Sistema de exemplo</p>
-              <p className="sys-desc">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
-                optio, temporibus architecto aut quos amet placeat quaerat qui
-                aperiam, ad officiis nostrum quas magnam accusantium accusamus
-                non quidem iusto. Illum.
-              </p>
-              <div className="tech">
-                <span>java</span>
-                <span>bootstrap</span>
-                <span>PostgreSql</span>
-              </div>
-              <button className="is-active">Ver detalhes</button>
-            </div>
-          </div>
-        </div>
+        </Swiper>
       </div>
     </ProjectsContainer>
   )
 }
+
 export default Projects

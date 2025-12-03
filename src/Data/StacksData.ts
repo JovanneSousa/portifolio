@@ -138,3 +138,49 @@ export const cursos: Curso[] = [
     certificado: 'https://hermes.dio.me/certificates/42Z5YOXO.pdf'
   }
 ]
+
+type Project = {
+  id: number
+  img: string
+  title: string
+  desc: string
+  tech: string[]
+}
+
+export const projetos: Project[] = [
+  {
+    id: 1,
+    img: 'https://placehold.co/300x200',
+    title: 'Sistema de exemplo 1',
+    desc: 'Lorem ipsum dolor sit amet...',
+    tech: ['Java', 'Bootstrap', 'PostgreSQL']
+  },
+  {
+    id: 2,
+    img: 'https://placehold.co/300x200',
+    title: 'Sistema de exemplo 2',
+    desc: 'Lorem ipsum dolor sit amet...',
+    tech: ['React', 'Styled Components', 'Node.js']
+  },
+  {
+    id: 3,
+    img: 'https://placehold.co/300x200',
+    title: 'Sistema de exemplo 3',
+    desc: 'Lorem ipsum dolor sit amet...',
+    tech: ['Python', 'Django', 'MySQL']
+  },
+  {
+    id: 4,
+    img: 'https://placehold.co/300x200',
+    title: 'Sistema de exemplo 2',
+    desc: 'Lorem ipsum dolor sit amet...',
+    tech: ['React', 'Styled Components', 'Node.js']
+  },
+  {
+    id: 5,
+    img: 'https://placehold.co/300x200',
+    title: 'Sistema de exemplo 2',
+    desc: 'Lorem ipsum dolor sit amet...',
+    tech: ['React', 'Styled Components', 'Node.js']
+  }
+]
