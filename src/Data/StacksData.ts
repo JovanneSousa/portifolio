@@ -163,6 +163,9 @@ export type Project = {
   title: string
   desc: string
   tech: string[]
+  link: string
+  code: string
+  stack: 'Fullstack' | 'Frontend' | 'Backend'
 }
 
 export const projetos: Project[] = [
@@ -172,22 +175,31 @@ export const projetos: Project[] = [
     imgMobile: ['./projects/fin-mobile.png'],
     title: 'FinControl',
     desc: 'Aplicação fullstack de finanças pessoais que permite ao usuário controlar receitas e despesas, gerenciar categorias personalizadas, aplicar filtros avançados por período e visualizar gráficos interativos de desempenho financeiro mensal.',
-    tech: ['ASP.NET Core', 'C#', 'PostgreSql', 'React', 'Redux']
+    tech: ['ASP.NET Core', 'C#', 'PostgreSql', 'React', 'Redux'],
+    link: 'https://fin-green.vercel.app/',
+    code: 'https://github.com/JovanneSousa/fin-api',
+    stack: 'Fullstack'
   },
   {
     id: 2,
     img: ['./projects/todo.png'],
-    imgMobile: [],
+    imgMobile: ['./projects/todo-mobile.png'],
     title: 'To do List',
     desc: 'Aplicação fullstack de To-Do List, inicialmente criada apenas em React e evoluída para um sistema completo com backend em .NET. O projeto conta com CRUD de tarefas, atualização de status, filtros por tags, navegação com React Router e gerenciamento de estado via Redux. No backend, implementei uma API REST em ASP.NET Core 9, com persistência em PostgreSQL, serviços estruturados, validação e documentação via Swagger. Uma aplicação simples, porém totalmente funcional, moderna e alinhada com a prática real do mercado.',
-    tech: ['ASP.NET Core', 'C#', 'React', 'Typescript', 'Redux']
+    tech: ['ASP.NET Core', 'C#', 'React', 'Typescript', 'Redux'],
+    link: 'https://to-do-react-navy-zeta.vercel.app/',
+    code: 'https://github.com/JovanneSousa/tarefas-api',
+    stack: 'Fullstack'
   },
   {
     id: 3,
     img: ['./projects/efood.png'],
-    imgMobile: [],
+    imgMobile: ['./projects/efood-mobile.png'],
     title: 'Efood',
     desc: 'food, uma plataforma de delivery que busca otimizar a experiência do usuário ao pedir refeições de forma rápida e prática. 🛵🍔',
-    tech: ['React', 'Typescript', 'Redux', 'styled-components']
+    tech: ['React', 'Typescript', 'Redux', 'styled-components'],
+    link: 'https://efood-six-amber.vercel.app/',
+    code: 'https://github.com/JovanneSousa/efood',
+    stack: 'Frontend'
   }
 ]

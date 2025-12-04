@@ -62,11 +62,26 @@ export const ProjectsContainer = styled.section`
         border: 1px solid ${colors.techcyan};
       }
 
-      .container-img-proj img {
-        height: 222px;
-        width: 100%;
-        object-fit: cover;
-        border-radius: inherit;
+      .container-img-proj {
+        position: relative;
+
+        span {
+          position: absolute;
+          right: 10px;
+          top: 10px;
+          background: ${colors.gradientOne};
+          color: ${colors.white};
+          padding: 4px 8px;
+          border-radius: 16px;
+          font-size: 12px;
+        }
+
+        img {
+          height: 222px;
+          width: 100%;
+          object-fit: cover;
+          border-radius: inherit;
+        }
       }
 
       .content {

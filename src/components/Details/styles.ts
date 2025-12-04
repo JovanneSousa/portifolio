@@ -39,6 +39,7 @@ export const DetailsContainer = styled.div`
     justify-content: space-between;
     gap: 10px;
     align-items: center;
+    margin: 0;
 
     .close {
       cursor: pointer;
@@ -67,7 +68,7 @@ export const DetailsContainer = styled.div`
   .freatures {
     ul {
       width: 100%;
-      max-height: 200px;
+      max-height: 150px;
       overflow-y: scroll;
       scrollbar-width: thin;
 
@@ -79,5 +80,18 @@ export const DetailsContainer = styled.div`
 
   .check-icon {
     color: ${colors.techcyan};
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    color: ${colors.white};
+
+    &:hover {
+      color: ${colors.white};
+    }
+    
   }
 `

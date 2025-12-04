@@ -74,7 +74,7 @@ export const EstiloGlobal = createGlobalStyle`
     }
   }
 
-  button {
+  button, a.details {
     width: 100%;
     border-radius: 8px;
     padding: 8px 16px;
