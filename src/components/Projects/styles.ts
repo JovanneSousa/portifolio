@@ -63,8 +63,8 @@ export const ProjectsContainer = styled.section`
       }
 
       .container-img-proj img {
+        height: 222px;
         width: 100%;
-        height: 100%;
         object-fit: cover;
         border-radius: inherit;
       }

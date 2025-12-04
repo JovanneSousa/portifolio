@@ -15,9 +15,11 @@ export const Container = styled.div`
 
   .img {
     z-index: 1;
-
+    
     @media (max-width: ${breakpoints.tablet}) {
+      z-index: 0;
       position: absolute;
+      top: 0;
       left: 0;
       opacity: 0.3;
     }
@@ -90,6 +92,10 @@ export const Container = styled.div`
     border-radius: 50%;
     filter: blur(60px);
     animation: pulse 4s ease-in-out infinite;
+
+    @media (max-width: ${breakpoints.tablet}) {
+      z-index: 1;
+    }
   }
 
   .circle1 {

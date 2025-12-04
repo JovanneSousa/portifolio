@@ -32,9 +32,10 @@ const Courses = () => {
               </div>
               <p className="info-course">UNIC - Universidade de Cuiabá</p>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
-                cupiditate sit voluptate alias iste quia modi, inventore saepe
-                atque voluptatem fugiat animi sint nulla.
+                Cursando Ciência da Computação com previsão de término em junho
+                de 2027. Durante a formação, atuo em projetos práticos
+                envolvendo programação, desenvolvimento web, estruturas de
+                dados, banco de dados e fundamentos de computação.
               </p>
               <div className="flex">
                 <p className="conclude">conclusão prevista: 06/2027</p>
@@ -59,13 +60,13 @@ const Courses = () => {
                   {c.plataforma} &bull; {c.horas}h
                 </p>
                 <div className="tech">
-                  {c.tecnologias.map((t) => (
-                    <span>{t}</span>
+                  {c.tecnologias.map((t, index) => (
+                    <span key={index}>{t}</span>
                   ))}
                 </div>
                 <div className="flex">
                   <p className="conclude">conclusão {c.ano}</p>
-                  <a href={c.certificado} target='blank'>
+                  <a href={c.certificado} target="blank">
                     <FontAwesomeIcon icon={faArrowUpRightFromSquare} />{' '}
                     Verificar
                   </a>

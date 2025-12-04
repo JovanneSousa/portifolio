@@ -3,8 +3,19 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Pagination } from 'swiper/modules'
 import 'swiper/css'
 import { projetos } from '../../Data/StacksData'
+import Modal from '../ModalContainer'
+import { useState } from 'react'
+import Details from '../Details'
 
 const Projects = () => {
+  const [isView, setIsView] = useState(true)
+  const [selectedItem, setSelectedItem] = useState<null | number>(null)
+
+  const close = () => {
+    setSelectedItem(null)
+    setIsView(false)
+  }
+
   return (
     <ProjectsContainer id="projeto">
       <div className="container">
@@ -31,6 +42,9 @@ const Projects = () => {
           }}
           className="carousel"
         >
+          <Modal isOpen={isView} onClose={close}>
+            <Details onClose={close} item={selectedItem!} />
+          </Modal>
           <div className="hidden">
             {projetos.map((p) => (
               <SwiperSlide key={p.id}>
@@ -42,11 +56,19 @@ const Projects = () => {
                     <p className="system-name">{p.title}</p>
                     <p className="sys-desc">{p.desc}</p>
                     <div className="tech">
-                      {p.tech.map((t) => (
-                        <span>{t}</span>
+                      {p.tech.map((t, index) => (
+                        <span key={index}>{t}</span>
                       ))}
                     </div>
-                    <button className="is-active">Ver detalhes</button>
+                    <button
+                      onClick={() => {
+                        setIsView(true)
+                        setSelectedItem(p.id)
+                      }}
+                      className="is-active"
+                    >
+                      Ver detalhes
+                    </button>
                   </div>
                 </div>
               </SwiperSlide>

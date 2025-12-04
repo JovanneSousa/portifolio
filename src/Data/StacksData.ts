@@ -13,10 +13,10 @@ export const frontendStacks: Stack[] = [
 
 export const backendStacks: Stack[] = [
   { name: '.NET Core', value: 72 },
-  {name: 'ASP.NET MVC', value: 72},
+  { name: 'ASP.NET MVC', value: 72 },
   { name: 'C#', value: 80 },
   { name: 'ORMs', value: 75 },
-  { name: 'APIs REST', value: 70 },
+  { name: 'APIs REST', value: 70 }
 ]
 
 export const toolsStacks: Stack[] = [
@@ -24,7 +24,7 @@ export const toolsStacks: Stack[] = [
   { name: 'PostgreSQL', value: 85 },
   { name: 'MySQL', value: 70 },
   { name: 'Azure', value: 60 },
-  { name: 'Git', value: 90 },
+  { name: 'Git', value: 90 }
 ]
 
 type Curso = {
@@ -106,7 +106,15 @@ export const cursos: Curso[] = [
     plataforma: 'Dio',
     horas: 93,
     ano: '2025',
-    tecnologias: ['C#', '.NET','Entity Framework', 'SqlServer', 'MongoDb', 'xUnit', 'Azure'],
+    tecnologias: [
+      'C#',
+      '.NET',
+      'Entity Framework',
+      'SqlServer',
+      'MongoDb',
+      'xUnit',
+      'Azure'
+    ],
     certificado: 'https://hermes.dio.me/certificates/KRRAMPYP.pdf'
   },
   {
@@ -115,7 +123,16 @@ export const cursos: Curso[] = [
     plataforma: 'EBAC',
     horas: 89,
     ano: '2025',
-    tecnologias: ['React', 'Java', 'SpringBoot', 'BootStrap', 'JQuery', 'MongoDb', 'Padrões de projetos', 'Clean Code'],
+    tecnologias: [
+      'React',
+      'Java',
+      'SpringBoot',
+      'BootStrap',
+      'JQuery',
+      'MongoDb',
+      'Padrões de projetos',
+      'Clean Code'
+    ],
     certificado:
       'https://static.lms.ebaconline.com.br/certs/course/b715045e-7a55-45f9-8dd6-84171739ba7c/original.pdf?1758200013528'
   },
@@ -139,7 +156,7 @@ export const cursos: Curso[] = [
   }
 ]
 
-type Project = {
+export type Project = {
   id: number
   img: string
   title: string
@@ -150,37 +167,23 @@ type Project = {
 export const projetos: Project[] = [
   {
     id: 1,
-    img: 'https://placehold.co/300x200',
-    title: 'Sistema de exemplo 1',
-    desc: 'Lorem ipsum dolor sit amet...',
-    tech: ['Java', 'Bootstrap', 'PostgreSQL']
+    img: './public/projects/fin.png',
+    title: 'FinControl',
+    desc: 'Aplicação fullstack de finanças pessoais que permite ao usuário controlar receitas e despesas, gerenciar categorias personalizadas, aplicar filtros avançados por período e visualizar gráficos interativos de desempenho financeiro mensal.',
+    tech: ['ASP.NET Core', 'C#', 'PostgreSql', 'React', 'Redux']
   },
   {
     id: 2,
-    img: 'https://placehold.co/300x200',
-    title: 'Sistema de exemplo 2',
-    desc: 'Lorem ipsum dolor sit amet...',
-    tech: ['React', 'Styled Components', 'Node.js']
+    img: './public/projects/todo.png',
+    title: 'To do List',
+    desc: 'Aplicação fullstack de To-Do List, inicialmente criada apenas em React e evoluída para um sistema completo com backend em .NET. O projeto conta com CRUD de tarefas, atualização de status, filtros por tags, navegação com React Router e gerenciamento de estado via Redux. No backend, implementei uma API REST em ASP.NET Core 9, com persistência em PostgreSQL, serviços estruturados, validação e documentação via Swagger. Uma aplicação simples, porém totalmente funcional, moderna e alinhada com a prática real do mercado.',
+    tech: ['ASP.NET Core', 'C#', 'React', 'Typescript', 'Redux']
   },
   {
     id: 3,
-    img: 'https://placehold.co/300x200',
-    title: 'Sistema de exemplo 3',
-    desc: 'Lorem ipsum dolor sit amet...',
-    tech: ['Python', 'Django', 'MySQL']
-  },
-  {
-    id: 4,
-    img: 'https://placehold.co/300x200',
-    title: 'Sistema de exemplo 2',
-    desc: 'Lorem ipsum dolor sit amet...',
-    tech: ['React', 'Styled Components', 'Node.js']
-  },
-  {
-    id: 5,
-    img: 'https://placehold.co/300x200',
-    title: 'Sistema de exemplo 2',
-    desc: 'Lorem ipsum dolor sit amet...',
-    tech: ['React', 'Styled Components', 'Node.js']
+    img: './public/projects/efood.png',
+    title: 'Efood',
+    desc: 'food, uma plataforma de delivery que busca otimizar a experiência do usuário ao pedir refeições de forma rápida e prática. 🛵🍔',
+    tech: ['React', 'Typescript', 'Redux', 'styled-components']
   }
 ]
