@@ -8,7 +8,7 @@ import { useState } from 'react'
 import Details from '../Details'
 
 const Projects = () => {
-  const [isView, setIsView] = useState(true)
+  const [isView, setIsView] = useState(false)
   const [selectedItem, setSelectedItem] = useState<null | number>(null)
 
   const close = () => {
