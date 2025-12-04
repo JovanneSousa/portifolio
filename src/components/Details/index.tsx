@@ -53,10 +53,6 @@ const Details: React.FC<DetailsProps> = ({ item, onClose }) => {
               pagination={{ clickable: true }}
               loop
               grabCursor={true}
-              breakpoints={{
-                0: { slidesPerView: 1 },
-                1024: { slidesPerView: 2 }
-              }}
               className={`carousel ${imagemMaiorQueUm() ? 'dois' : ''}`}
             >
               {projeto.img.map((f, index) => (
