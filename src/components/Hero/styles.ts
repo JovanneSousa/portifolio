@@ -3,7 +3,6 @@ import { breakpoints, colors } from '../../styles'
 
 export const Container = styled.div`
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
@@ -12,6 +11,20 @@ export const Container = styled.div`
   color: #f8fafc;
   min-height: calc(100vh - 70px);
   gap: 32px;
+  padding: 40px 0;
+
+  .img {
+    z-index: 1;
+
+    @media (max-width: ${breakpoints.tablet}) {
+      position: absolute;
+      left: 0;
+      opacity: 0.3;
+    }
+
+    img {
+    }
+  }
 
   .hi {
     font-weight: bold;
@@ -38,8 +51,9 @@ export const Container = styled.div`
     font-size: 24px;
     max-width: 650px;
 
-        @media (max-width: ${breakpoints.tablet}) {
+    @media (max-width: ${breakpoints.tablet}) {
       font-size: 18px;
+      color: ${colors.lightGray};
     }
   }
 
@@ -70,6 +84,7 @@ export const Container = styled.div`
 
   .circle {
     position: absolute;
+    z-index: 0;
     width: 24rem;
     height: 24rem;
     border-radius: 50%;
@@ -92,7 +107,7 @@ export const Container = styled.div`
 
   .content {
     position: relative;
-    z-index: 1;
+    z-index: 2;
     text-align: center;
     animation: fadeIn 1.5s ease-out forwards;
     max-width: 100%;

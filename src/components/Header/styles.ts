@@ -8,7 +8,7 @@ export const HeaderSection = styled.header.withConfig({
   top: 0;
   padding: 16px 0;
   transition: background 0.3s ease, border-bottom 0.3s ease;
-  z-index: 2;
+  z-index: 9;
   backdrop-filter: ${({ scrolled }) => (scrolled ? 'blur(7px)' : 'none')};
 
   background: ${({ scrolled }) =>

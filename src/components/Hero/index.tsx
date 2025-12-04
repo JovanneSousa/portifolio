@@ -25,6 +25,9 @@ const Hero = () => {
           </a>
         </div>
       </div>
+      <div className="img">
+        <img src="./me-.png" alt='uma foto minha'/>
+      </div>
     </Container>
   )
 }
