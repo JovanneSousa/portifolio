@@ -98,8 +98,8 @@ export const DetailsContainer = styled.div`
     display: -webkit-box;
     -webkit-line-clamp: 8;
     -webkit-box-orient: vertical;
-    overflow: scroll;
-    scrollbar-width: thin;
+    overflow-y: scroll;
+    scrollbar-width: none;
   }
 
   .flex {
@@ -138,7 +138,7 @@ export const DetailsContainer = styled.div`
       width: 100%;
       max-height: 150px;
       overflow-y: scroll;
-      scrollbar-width: thin;
+      scrollbar-width: none;
 
       li {
         padding: 4px 0;
