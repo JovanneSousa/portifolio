@@ -50,7 +50,7 @@ const Projects = () => {
               <SwiperSlide key={p.id}>
                 <div className="proj shadow">
                   <div className="container-img-proj">
-                    <img src={p.img} alt="placeholder" />
+                    <img src={p.img[0]} alt="placeholder" />
                   </div>
                   <div className="content">
                     <p className="system-name">{p.title}</p>

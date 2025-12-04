@@ -158,7 +158,8 @@ export const cursos: Curso[] = [
 
 export type Project = {
   id: number
-  img: string
+  img: string[]
+  imgMobile: string[]
   title: string
   desc: string
   tech: string[]
@@ -167,21 +168,24 @@ export type Project = {
 export const projetos: Project[] = [
   {
     id: 1,
-    img: './projects/fin.png',
+    img: ['./projects/fin.png'],
+    imgMobile: ['./projects/fin-mobile.png'],
     title: 'FinControl',
     desc: 'Aplicação fullstack de finanças pessoais que permite ao usuário controlar receitas e despesas, gerenciar categorias personalizadas, aplicar filtros avançados por período e visualizar gráficos interativos de desempenho financeiro mensal.',
     tech: ['ASP.NET Core', 'C#', 'PostgreSql', 'React', 'Redux']
   },
   {
     id: 2,
-    img: './projects/todo.png',
+    img: ['./projects/todo.png'],
+    imgMobile: [],
     title: 'To do List',
     desc: 'Aplicação fullstack de To-Do List, inicialmente criada apenas em React e evoluída para um sistema completo com backend em .NET. O projeto conta com CRUD de tarefas, atualização de status, filtros por tags, navegação com React Router e gerenciamento de estado via Redux. No backend, implementei uma API REST em ASP.NET Core 9, com persistência em PostgreSQL, serviços estruturados, validação e documentação via Swagger. Uma aplicação simples, porém totalmente funcional, moderna e alinhada com a prática real do mercado.',
     tech: ['ASP.NET Core', 'C#', 'React', 'Typescript', 'Redux']
   },
   {
     id: 3,
-    img: './projects/efood.png',
+    img: ['./projects/efood.png'],
+    imgMobile: [],
     title: 'Efood',
     desc: 'food, uma plataforma de delivery que busca otimizar a experiência do usuário ao pedir refeições de forma rápida e prática. 🛵🍔',
     tech: ['React', 'Typescript', 'Redux', 'styled-components']

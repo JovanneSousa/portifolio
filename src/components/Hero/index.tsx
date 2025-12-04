@@ -7,7 +7,6 @@ const Hero = () => {
         <div className="circle circle1"></div>
         <div className="circle circle2"></div>
       </div>
-
       <div className="content">
         <p className="color hi">Olá, eu sou Jovanne</p>
         <h1 className="color dev">Desenvolvedor</h1>
@@ -26,7 +25,7 @@ const Hero = () => {
         </div>
       </div>
       <div className="img">
-        <img src="./me-.png" alt='uma foto minha'/>
+        <img src="./me-.png" alt="uma foto minha" />
       </div>
     </Container>
   )

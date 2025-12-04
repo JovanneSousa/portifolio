@@ -11,7 +11,7 @@ export const Overlay = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 2;
+  z-index: 4;
 
   @media (max-width: ${breakpoints.tablet}) {
     padding: 15px;
