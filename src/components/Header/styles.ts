@@ -38,6 +38,11 @@ export const HeaderSection = styled.header.withConfig({
       padding: 8px 16px;
       border-radius: 8px;
 
+      a {
+        width: 100%;
+        display: flex;
+      }
+
       .white {
         color: ${colors.white};
       }

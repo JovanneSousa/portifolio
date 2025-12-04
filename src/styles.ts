@@ -32,7 +32,7 @@ export const EstiloGlobal = createGlobalStyle`
     scroll-behavior: smooth;
   }
 
-  #inicio, #tecnologia, #projeto, #cursos, #experiencias {
+  #inicio, #tecnologia, #projeto, #cursos, #experiencias, #contato {
     scroll-margin-top: 70px;
   }
 
