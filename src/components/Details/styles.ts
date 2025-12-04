@@ -1,13 +1,12 @@
 import styled from 'styled-components'
-import { colors } from '../../styles'
+import { breakpoints, colors } from '../../styles'
 
 export const DetailsContainer = styled.div`
   background-color: ${colors.fundo};
   border-radius: 8px;
-  max-width: 850px;
-  max-height: 650px;
   display: flex;
   border: 1px solid ${colors.border};
+  width: 100%;
 
   .content-modal {
     display: flex;
@@ -17,11 +16,75 @@ export const DetailsContainer = styled.div`
     padding: 8px 16px;
   }
 
+  .carousel {
+    position: relative;
+    z-index: 9;
+    max-width: 300px;
+
+    .swiper {
+      position: relative;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      top: 40%;
+      color: ${colors.techcyan};
+      z-index: 1;
+    }
+
+    .swiper-button-prev {
+      left: 0px;
+      transform: scaleX(-1);
+    }
+
+    .swiper-button-next {
+      right: 0px;
+    }
+
+    .swiper-pagination-bullet-active {
+      background: ${colors.techcyan};
+    }
+
+    .swiper-slide {
+      height: auto;
+      display: flex;
+    }
+
+    @media (min-width: ${breakpoints.desktop}) {
+      &.dois {
+        max-width: 450px;
+      }
+    }
+  }
+
+  .container-img-proj-carousel {
+    border-radius: 8px;
+    align-self: center;
+    img {
+      border-radius: 8px;
+      max-width: 100%;
+    }
+  }
+
   .container-img-proj,
   img {
-    max-height: 650px;
     object-fit: cover;
     border-radius: inherit;
+  }
+
+  .container-img-proj {
+    display: none;
+
+    @media (min-width: ${breakpoints.desktop}) {
+      display: block;
+    }
   }
 
   p,
@@ -32,6 +95,11 @@ export const DetailsContainer = styled.div`
 
   .desc-modal {
     margin-top: 16px;
+    display: -webkit-box;
+    -webkit-line-clamp: 8;
+    -webkit-box-orient: vertical;
+    overflow: scroll;
+    scrollbar-width: thin;
   }
 
   .flex {
@@ -92,6 +160,5 @@ export const DetailsContainer = styled.div`
     &:hover {
       color: ${colors.white};
     }
-    
   }
 `

@@ -45,36 +45,34 @@ const Projects = () => {
           <Modal isOpen={isView} onClose={close}>
             <Details onClose={close} item={selectedItem!} />
           </Modal>
-          <div className="hidden">
-            {projetos.map((p) => (
-              <SwiperSlide key={p.id}>
-                <div className="proj shadow">
-                  <div className="container-img-proj">
-                    <span>{p.stack}</span>
-                    <img src={p.img[0]} alt="placeholder" />
-                  </div>
-                  <div className="content">
-                    <p className="system-name">{p.title}</p>
-                    <p className="sys-desc">{p.desc}</p>
-                    <div className="tech">
-                      {p.tech.map((t, index) => (
-                        <span key={index}>{t}</span>
-                      ))}
-                    </div>
-                    <button
-                      onClick={() => {
-                        setIsView(true)
-                        setSelectedItem(p.id)
-                      }}
-                      className="is-active"
-                    >
-                      Ver detalhes
-                    </button>
-                  </div>
+          {projetos.map((p) => (
+            <SwiperSlide key={p.id}>
+              <div className="proj shadow">
+                <div className="container-img-proj">
+                  <span>{p.stack}</span>
+                  <img src={p.img[0]} alt="placeholder" />
                 </div>
-              </SwiperSlide>
-            ))}
-          </div>
+                <div className="content">
+                  <p className="system-name">{p.title}</p>
+                  <p className="sys-desc">{p.desc}</p>
+                  <div className="tech">
+                    {p.tech.map((t, index) => (
+                      <span key={index}>{t}</span>
+                    ))}
+                  </div>
+                  <button
+                    onClick={() => {
+                      setIsView(true)
+                      setSelectedItem(p.id)
+                    }}
+                    className="is-active"
+                  >
+                    Ver detalhes
+                  </button>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
     </ProjectsContainer>

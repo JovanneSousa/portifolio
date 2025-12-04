@@ -18,8 +18,12 @@ export const Overlay = styled.div`
   }
 
   .modal {
+    margin: 0 auto;
+    max-width: 1024px;
+    
     @media (max-width: ${breakpoints.tablet}) {
       width: 100%;
+      margin: 0;
     }
   }
 `;

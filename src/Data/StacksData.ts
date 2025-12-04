@@ -193,10 +193,15 @@ export const projetos: Project[] = [
   },
   {
     id: 3,
-    img: ['./projects/efood.png'],
+    img: [
+      './projects/efood.png',
+      './projects/efood.png',
+      './projects/efood.png',
+      './projects/efood.png'
+    ],
     imgMobile: ['./projects/efood-mobile.png'],
     title: 'Efood',
-    desc: 'food, uma plataforma de delivery que busca otimizar a experiência do usuário ao pedir refeições de forma rápida e prática. 🛵🍔',
+    desc: 'Efood, uma plataforma de delivery que busca otimizar a experiência do usuário ao pedir refeições de forma rápida e prática. 🛵🍔',
     tech: ['React', 'Typescript', 'Redux', 'styled-components'],
     link: 'https://efood-six-amber.vercel.app/',
     code: 'https://github.com/JovanneSousa/efood',
