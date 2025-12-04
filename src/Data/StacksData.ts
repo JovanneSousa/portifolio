@@ -166,19 +166,35 @@ export type Project = {
   link: string
   code: string
   stack: 'Fullstack' | 'Frontend' | 'Backend'
+  funcionalidade: string[]
 }
 
 export const projetos: Project[] = [
   {
     id: 1,
-    img: ['./projects/fin.png'],
+    img: [
+      './projects/fin.png',
+      './projects/fin-principal.png',
+      './projects/fin-login.png',
+      './projects/fin-filtros.png'
+    ],
     imgMobile: ['./projects/fin-mobile.png'],
     title: 'FinControl',
     desc: 'Aplicação fullstack de finanças pessoais que permite ao usuário controlar receitas e despesas, gerenciar categorias personalizadas, aplicar filtros avançados por período e visualizar gráficos interativos de desempenho financeiro mensal.',
     tech: ['ASP.NET Core', 'C#', 'PostgreSql', 'React', 'Redux'],
     link: 'https://fin-green.vercel.app/',
     code: 'https://github.com/JovanneSousa/fin-api',
-    stack: 'Fullstack'
+    stack: 'Fullstack',
+    funcionalidade: [
+      'Cadastro e login com ASP.NET Identity (JWT)',
+      'CRUD completo de categorias (receita/despesa)',
+      'CRUD completo de transações',
+      'Filtros avançados: (Mês atual, Últimos 3 e 6 meses, Último ano, Data específica, e intervado de datas x -> y',
+      'Dashboard com gráficos',
+      'Comparativo de receitas e despesas',
+      'Comparativo de categorias',
+      'Comparativo de histórico de ultimos meses'
+    ]
   },
   {
     id: 2,
@@ -189,15 +205,21 @@ export const projetos: Project[] = [
     tech: ['ASP.NET Core', 'C#', 'React', 'Typescript', 'Redux'],
     link: 'https://to-do-react-navy-zeta.vercel.app/',
     code: 'https://github.com/JovanneSousa/tarefas-api',
-    stack: 'Fullstack'
+    stack: 'Fullstack',
+    funcionalidade: [
+      'CRUD completo de tarefas',
+      'Atualização de status (pendente/concluída)',
+      'Filtro por status, título e data',
+      'Persistência com Entity Framework Core'
+    ]
   },
   {
     id: 3,
     img: [
       './projects/efood.png',
-      './projects/efood.png',
-      './projects/efood.png',
-      './projects/efood.png'
+      './projects/efood-inicial.png',
+      './projects/efood-details.png',
+      './projects/efood-cart.png'
     ],
     imgMobile: ['./projects/efood-mobile.png'],
     title: 'Efood',
@@ -205,6 +227,12 @@ export const projetos: Project[] = [
     tech: ['React', 'Typescript', 'Redux', 'styled-components'],
     link: 'https://efood-six-amber.vercel.app/',
     code: 'https://github.com/JovanneSousa/efood',
-    stack: 'Frontend'
+    stack: 'Frontend',
+    funcionalidade: [
+      'Consumo de API Rest',
+      'Manipulação global de estado com Redux',
+      'Validação de formulário com Yup',
+      'Navegação eficiente entre páginas com React Router DOM'
+    ]
   }
 ]

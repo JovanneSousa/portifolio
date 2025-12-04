@@ -14,25 +14,23 @@ const Footer = () => {
           <nav>
             <ul>
               <li>
-                <a className="footer-nav" href="#inicio">
-                  Início
-                </a>
+                <a href="#inicio">Início</a>
+              </li>
+
+              <li>
+                <a href="#tecnologia">Tecnologias</a>
               </li>
               <li>
-                <a className="footer-nav" href="#sobre">
-                  {' '}
-                  Sobre
-                </a>
+                <a href="#projeto">Projetos</a>
               </li>
               <li>
-                <a className="footer-nav" href="#tecnologia">
-                  Tecnologias
-                </a>
+                <a href="#cursos">Formação</a>
               </li>
               <li>
-                <a className="footer-nav" href="#projeto">
-                  Projeto
-                </a>
+                <a href="#experiencias">Experiências</a>
+              </li>
+              <li>
+                <a href="#contato">Contato</a>
               </li>
             </ul>
           </nav>

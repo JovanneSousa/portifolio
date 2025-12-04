@@ -99,7 +99,8 @@ export const DetailsContainer = styled.div`
     -webkit-line-clamp: 8;
     -webkit-box-orient: vertical;
     overflow-y: scroll;
-    scrollbar-width: none;
+    scrollbar-width: thin;
+    scrollbar-color: ${colors.techcyan} transparent;
   }
 
   .flex {
@@ -138,8 +139,9 @@ export const DetailsContainer = styled.div`
       width: 100%;
       max-height: 150px;
       overflow-y: scroll;
-      scrollbar-width: none;
-
+      scrollbar-width: thin;
+      scrollbar-color: ${colors.techcyan} transparent;
+      
       li {
         padding: 4px 0;
       }

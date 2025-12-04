@@ -28,6 +28,14 @@ export const breakpoints = {
 }
 
 export const EstiloGlobal = createGlobalStyle`
+  html {
+    scroll-behavior: smooth;
+  }
+
+  #inicio, #tecnologia, #projeto, #cursos, #experiencias {
+    scroll-margin-top: 70px;
+  }
+
   * {
     margin: 0;
     padding: 0;

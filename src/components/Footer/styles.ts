@@ -39,7 +39,9 @@ export const FooterSection = styled.footer`
 
   ul {
     display: flex;
-
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     li {
       padding: 16px;
 
