@@ -16,6 +16,11 @@ const Projects = () => {
     setIsView(false)
   }
 
+  const open = (id: number) => {
+    setSelectedItem(id)
+    setIsView(true)
+  }
+
   return (
     <ProjectsContainer id="projeto">
       <div className="container">
@@ -46,7 +51,7 @@ const Projects = () => {
             <Details onClose={close} item={selectedItem!} />
           </Modal>
           {projetos.map((p) => (
-            <SwiperSlide key={p.id}>
+            <SwiperSlide onClick={() => open(p.id)} key={p.id}>
               <div className="proj shadow">
                 <div className="container-img-proj">
                   <span>{p.stack}</span>
@@ -60,13 +65,7 @@ const Projects = () => {
                       <span key={index}>{t}</span>
                     ))}
                   </div>
-                  <button
-                    onClick={() => {
-                      setIsView(true)
-                      setSelectedItem(p.id)
-                    }}
-                    className="is-active"
-                  >
+                  <button onClick={() => open(p.id)} className="is-active">
                     Ver detalhes
                   </button>
                 </div>

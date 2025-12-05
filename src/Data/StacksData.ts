@@ -198,7 +198,7 @@ export const projetos: Project[] = [
   },
   {
     id: 2,
-    img: ['./projects/todo.png'],
+    img: ['./projects/todo.png', './projects/todo-add.png'],
     imgMobile: ['./projects/todo-mobile.png'],
     title: 'To do List',
     desc: 'Aplicação fullstack de To-Do List, inicialmente criada apenas em React e evoluída para um sistema completo com backend em .NET. O projeto conta com CRUD de tarefas, atualização de status, filtros por tags, navegação com React Router e gerenciamento de estado via Redux. No backend, implementei uma API REST em ASP.NET Core 9, com persistência em PostgreSQL, serviços estruturados, validação e documentação via Swagger. Uma aplicação simples, porém totalmente funcional, moderna e alinhada com a prática real do mercado.',

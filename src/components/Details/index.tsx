@@ -24,6 +24,8 @@ const Details: React.FC<DetailsProps> = ({ item, onClose }) => {
     return false
   }
 
+  console.log(projeto)
+
   return (
     <DetailsContainer>
       {projeto ? (
