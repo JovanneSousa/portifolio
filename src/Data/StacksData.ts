@@ -198,6 +198,38 @@ export const projetos: Project[] = [
   },
   {
     id: 2,
+    img: ['./projects/apiAuthCapa.png'],
+    imgMobile: [],
+    title: 'Auth',
+    desc: 'API de autenticação completa utilizando .NET 8, ASP.NET Core Identity e JWT (JSON Web Token), oferecendo recursos de cadastro, login e geração de tokens seguros com claims personalizadas. O objetivo é disponibilizar um módulo reutilizável de autenticação que possa ser facilmente integrado a diferentes aplicações e arquiteturas.',
+    tech: ['ASP.NET Core', 'C#', 'ASP.NET Identity', 'Entity Framework', 'PostgreSQL'],
+    link: 'https://efood-six-amber.vercel.app/',
+    code: 'https://github.com/JovanneSousa/email-sender',
+    stack: 'Backend',
+    funcionalidade: [
+      'Envio de emails por SMPT ou ResendAPI',
+      'Consumo de mensagens via rabbitMQ',
+      'Logs persistentes em banco PostgreSQL'
+    ]
+  },
+    {
+    id: 3,
+    img: ['./projects/mailSender.png'],
+    imgMobile: [],
+    title: 'Email Sender',
+    desc: ' serviço de envio de e-mails assíncrono, desacoplado e reutilizável, pensado para atender múltiplas aplicações sem impacto direto nas requisições.',
+    tech: ['SpringBoot', 'RabbitMQ', 'Java', 'Hibernate', 'JPA', 'Thymeleaf'],
+    link: 'https://efood-six-amber.vercel.app/',
+    code: 'https://github.com/JovanneSousa/email-sender',
+    stack: 'Backend',
+    funcionalidade: [
+      'Envio de emails por SMPT ou ResendAPI',
+      'Consumo de mensagens via rabbitMQ',
+      'Logs persistentes em banco PostgreSQL'
+    ]
+  },
+  {
+    id: 4,
     img: ['./projects/todo.png', './projects/todo-add.png'],
     imgMobile: ['./projects/todo-mobile.png'],
     title: 'To do List',
@@ -214,7 +246,7 @@ export const projetos: Project[] = [
     ]
   },
   {
-    id: 3,
+    id: 5,
     img: [
       './projects/efood.png',
       './projects/efood-inicial.png',
@@ -234,5 +266,6 @@ export const projetos: Project[] = [
       'Validação de formulário com Yup',
       'Navegação eficiente entre páginas com React Router DOM'
     ]
-  }
+  },
+
 ]

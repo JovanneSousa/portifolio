@@ -62,7 +62,7 @@ const Details: React.FC<DetailsProps> = ({ item, onClose }) => {
               className={`carousel ${imagemMaiorQueUm() ? 'dois' : ''}`}
             >
               {projeto.img.map((f, index) => (
-                <SwiperSlide key={index}>
+                <SwiperSlide key={index} >
                   <div className="container-img-proj-carousel">
                     <img src={f} alt="imagens do projeto" />
                   </div>
